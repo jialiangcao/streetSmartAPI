@@ -9,7 +9,8 @@ from elevenlabs.client import ElevenLabs
 from dotenv import load_dotenv
 
 app = Flask(__name__)
-CORS(app, resources={r"/traffic": {"origins": "https://street-smart-8folgeudy-matt-caos-projects.vercel.app/"}})
+CORS(app, resources={r"/traffic": {"origins": "https://street-smart-8folgeudy-matt-caos-projects.vercel.app"},
+                     r"/car": {"origins": "https://street-smart-8folgeudy-matt-caos-projects.vercel.app"}})
 trafficModel = YOLO("best.pt")
 carModel = YOLO("car-detection.pt")
 
